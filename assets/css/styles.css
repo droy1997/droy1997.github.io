@@ -479,13 +479,6 @@ output {
   display: inline-block;
 }
 
-iframe {
-  border: 0;
-  width: 100%;
-  min-height: 631px;
-  border: 1px solid black;
-  position: relative;
-}
 
 summary {
   display: list-item;
@@ -3004,7 +2997,10 @@ textarea.form-control-lg {
 .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
-
+.other-thing {
+  color: #f4af5b;
+  text-decoration: none;
+}
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -3054,7 +3050,7 @@ textarea.form-control-lg {
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #558985;
+  background-color: #fbbc6e;
   border-color: #f4af5b;
   box-shadow: 0 0 0 0.25rem rgba(123, 175, 172, 0.5);
 }
@@ -3068,7 +3064,7 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  /* background : transparent; */
+  background : transparent;
   background-color: #f4af5b;
   border-color: #f4af5b;
 }
@@ -3573,12 +3569,9 @@ textarea.form-control-lg {
   border-color: #fff;
 }
 .btn-outline-white:hover {
-  /* color: #000; */
   color: #fff;
   background-color: #f4af5b;
   border-color: #f4af5b;
-  /* background-color: #fff; */
-  /* border-color: #fff; */
 }
 .btn-check:focus + .btn-outline-white, .btn-outline-white:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
@@ -11744,6 +11737,7 @@ section .container {
   margin-bottom: 0;
 }
 
+
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
@@ -12095,7 +12089,55 @@ section .container {
 .contact .info-box .social-links a:hover {
   color: #f4af5b;
 }
+.contact iframe {
+  border: 0;
+  width: 100%;
+  min-height: 631px;
+  border: 1px solid black;
+  position: relative;
+}
 
+.other .row {
+  padding-top: 2rem;
+}
+.other h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f4a950;
+}
+.other h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+  padding: 1em;
+  
+}
+
+.other .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.other .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.other .content ul strong {
+  margin-right: 10px;
+}
+
+.other .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #18d26e;
+  line-height: 0;
+}
+
+.other .content p:last-child {
+  margin-bottom: 0;
+}
 
 @-webkit-keyframes animate-loading {
   0% {

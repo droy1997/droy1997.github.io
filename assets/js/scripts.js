@@ -60,12 +60,14 @@ document.addEventListener("DOMContentLoaded", function(){
     const on = (type, el, listener, all = false) => {
       let selectEl = select(el, all)
       let mast = select('#mainNav .navbar-brand', false)
-      let btnprim = select('#header .btn-primary', false)
+      // let btnprim = select('#header .btn-primary', false)
+      let otherlink = select('#header .other-thing', false)
       if (selectEl) {
         if (all) {
           selectEl.forEach(e => e.addEventListener(type, listener))
           mast.addEventListener(type, listener)
-          btnprim.addEventListener(type, listener)
+          // btnprim.addEventListener(type, listener)
+          otherlink.addEventListener(type, listener)
         } else {
           selectEl.addEventListener(type, listener)
         }
