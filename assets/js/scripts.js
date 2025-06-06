@@ -5,14 +5,12 @@
 */
 //
 // Scripts
-// 
+//
 
 document.addEventListener("DOMContentLoaded", function(){
-		
     el_autohide = document.querySelector('#mainNav');
 
     if(el_autohide){
-        
         var last_scroll_top = 0;
         window.addEventListener('scroll', function() {
                let scroll_top = window.scrollY;
@@ -30,18 +28,16 @@ document.addEventListener("DOMContentLoaded", function(){
             }
             last_scroll_top = scroll_top;
 
-        }); 
+        });
         // window.addEventListener
 
     }
     // if
-    
-}); 
+});
 
 
 (function() {
     "use strict";
-  
     /**
      * Easy selector helper function
      */
@@ -53,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function(){
         return document.querySelector(el)
       }
     }
-  
     /**
      * Easy event listener function
      */
@@ -73,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
     }
-  
     /**
      * Scrolls to an element with header offset
      */
@@ -87,23 +81,18 @@ document.addEventListener("DOMContentLoaded", function(){
       let section = select(this.hash)
       if (section) {
         e.preventDefault()
-  
         let navbar = select('#mainNav')
         let header = select('#header')
         let sections = select('section', true)
         let navlinks = select('#mainNav .nav-link', true)
-  
         navlinks.forEach((item) => {
           item.classList.remove('active')
         })
-  
         this.classList.add('active')
-  
         const collapse = document.querySelector(".navbar-collapse")
         if (collapse.classList.contains('show')) {
             collapse.classList.remove('show')
         }
-  
         if (this.hash == '#header') {
           header.classList.remove("masthead-hide")
           sections.forEach((item) => {
@@ -111,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function(){
           })
           return;
         }
-  
         if (!header.classList.contains('header')) {
           header.classList.add("masthead-hide")
           setTimeout(function() {
@@ -119,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function(){
               item.classList.remove('section-show')
             })
             section.classList.add('section-show')
-  
           }, 350);
         } else {
           sections.forEach((item) => {
@@ -127,24 +114,19 @@ document.addEventListener("DOMContentLoaded", function(){
           })
           section.classList.add('section-show')
         }
-  
         scrollto(this.hash)
       }
     }, true)
-  
     /**
      * Activate/show sections on load with hash links
      */
     window.addEventListener('load', () => {
       if (window.location.hash) {
         let initial_nav = select(window.location.hash)
-  
         if (initial_nav) {
           let header = select('#header')
           let navlinks = select('#mainNav .nav-link', true)
-  
           header.classList.add('header')
-  
           navlinks.forEach((item) => {
             if (item.getAttribute('href') == window.location.hash) {
               item.classList.add('active')
@@ -152,16 +134,13 @@ document.addEventListener("DOMContentLoaded", function(){
               item.classList.remove('active')
             }
           })
-  
           setTimeout(function() {
             initial_nav.classList.add('section-show')
           }, 350);
-  
           scrollto(window.location.hash)
         }
       }
     });
-  
     /**
      * Skills animation
      */
@@ -178,5 +157,5 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       })
     }
-  
   })()
+
